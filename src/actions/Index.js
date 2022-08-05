@@ -7,3 +7,10 @@ export const addToDo = (data) => {
     },
   };
 };
+
+export const deleteTodo = (id) => {
+  return {
+    type: "Delete_TODO",
+    id,
+  };
+};

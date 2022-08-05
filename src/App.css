@@ -46,7 +46,19 @@
   width: 40%;
 }
 
-.ListItems{
- 
+.ListItems {
+  width: 40%;
   display: inline-block;
+}
+
+.effects {
+  background-color: darkcyan;
+  /* padding: 10px; */
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+}
+.effectss {
+   /* padding: 10px; */
+  float: right;
 }

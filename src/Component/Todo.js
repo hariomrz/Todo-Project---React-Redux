@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "../App.css";
-import { addToDo } from "../actions/Index";
+import { addToDo, deleteTodo } from "../actions/Index";
 
 const Todo = () => {
   const [todo, setTodo] = useState("");
@@ -25,11 +25,19 @@ const Todo = () => {
           Add Item
         </button>
       </div>
-      <ul className="ListItems">
-        {list.map((items, index) => {
-          return <li key={index}>{items.data}</li>;
+      <div className="ListItems">
+        {list.map((items) => {
+          return (
+            <div key={items.id} className="d-flex mt-5 effects">
+              <h4>{items.data}</h4>
+              <i
+                className="bi bi-trash"
+                onClick={() => dispatch(deleteTodo(items.id))}
+              ></i>
+            </div>
+          );
         })}
-      </ul>
+      </div>
     </div>
   );
 };
