@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Main-Wrapper {
+  width: 100%;
+}
+
+.Input-Box input {
+  display: inline-block;
+  width: 40%;
+}
+
+.ListItems{
+ 
+  display: inline-block;
+}
